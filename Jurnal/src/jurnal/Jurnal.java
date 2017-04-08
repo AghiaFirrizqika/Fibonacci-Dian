@@ -20,6 +20,7 @@ public class Jurnal {
         System.out.print("Masukkan deret Fibonacci : ");
         int angka = scan.nextInt();
         long fibonacci[] = new long[angka];
+        long hasil = 0;
         
         fibonacci[0]=1;
         fibonacci[1]=1;
@@ -29,7 +30,10 @@ public class Jurnal {
         }
         for (int i = 0; i < angka; i++){
             System.out.print(fibonacci[i] + " ");
+            hasil = fibonacci[i] + hasil;
+            
         }
+        System.out.print("Hasil : " + hasil);
     }
     
 }
