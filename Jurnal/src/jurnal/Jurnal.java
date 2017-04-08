@@ -1,35 +1,31 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package jurnal;
 
 import java.util.Scanner;
-/**
- *
- * @author Praktikan
- */
-public class Jurnal {
 
-    /**
-     * @param args the command line arguments
-     */
+public class Jurnal {
+    
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Masukkan deret Fibonacci : ");
-        int angka = scan.nextInt();
-        long fibonacci[] = new long[angka];
-        
-        fibonacci[0]=1;
-        fibonacci[1]=1;
-        
-        for (int i = 2; i < angka; i++){
-            fibonacci[i] = fibonacci[i-1] + fibonacci[i-2];
+         
+        Scanner input = new Scanner(System.in);
+        System.out.print("Masukkan Deret Fibonacci : ");
+        int n = input.nextInt();
+        long fib[] = new long[n];
+        long hasil = 0;
+         
+        fib[0] = 1;
+        fib[1] = 1;
+         
+        for(int i = 2; i < n; i++) {
+            fib[i] = fib[i-1] + fib[i-2];
         }
-        for (int i = 0; i < angka; i++){
-            System.out.print(fibonacci[i] + " ");
+         
+        for (int i = n - 1; i >= 0; i--) {
+            System.out.print(fib[i] +  " ");
+            hasil = fib[i] + hasil;
         }
+        System.out.println("");
+        System.out.println("Hasil : " + hasil);
+    
     }
     
 }
